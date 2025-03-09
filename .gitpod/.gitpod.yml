@@ -1,0 +1,30 @@
+image: gitpod/workspace-full
+
+tasks:
+  - name: Install Backend
+    command: |
+      nvm install 18
+      nvm use 18
+      npm install
+      cp .env.example .env
+
+  - name: Install Frontend
+    command: |
+      cd frontend
+      npm install
+
+  - name: Start Backend
+    command: |
+      npm run dev
+
+  - name: Start Frontend
+    command: |
+      cd frontend
+      npm run dev
+
+ports:
+  - port: 5000
+    onOpen: open-preview
+  - port: 3000
+    onOpen: open-browser
+    
