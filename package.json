@@ -3,4 +3,6 @@
   "start": "node server.js",
   "build": "npm run build",
   "test": "echo \"No test specified\" && exit 1"
-}
+  "dependencies": {
+  "framer-motion": "^10.0.0"
+  }
